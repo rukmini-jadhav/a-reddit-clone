@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/rukmini-jadhav/a-reddit-clone.git'
-            }
-        }
-      }
-}
+                git url:'https://github.com/rukmini-jadhav/a-reddit-clone.git' branch: 'main', 
+                  }
+              }
+         }
+    }
