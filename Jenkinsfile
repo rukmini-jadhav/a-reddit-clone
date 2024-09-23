@@ -1,14 +1,14 @@
 pipeline {
     agent any
-    stages{
-        stage('clean workspace') {
+    stages {
+        stage('Clean Workspace') {
             steps {
-                cleanWs ()
+                cleanWs()
             }
         }
-        stage('checkout from git') {
+        stage('Checkout from Git') {
             steps {
-                git branch: 'main', git url: 'https://github.com/rukmini-jadhav/a-reddit-clone.git'
+                git url: 'https://github.com/rukmini-jadhav/a-reddit-clone.git', branch: 'main'
             }
         }
     }
