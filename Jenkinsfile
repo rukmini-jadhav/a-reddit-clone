@@ -29,6 +29,18 @@ pipeline {
 
             }
         }
+        stage('Quality Gate') {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialId: 'sonarqube-token'
+                }
+            }
+        }
+        stage('install dependencies') {
+            steps {
+                sh "npm install"
+            }
+        }
     }
 
 }
